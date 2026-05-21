@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>転勤・単身赴任 費用準備診断｜転勤先・家族構成から費用と準備リストを生成</title>
+  <meta name="description" content="転勤先・家族構成から単身赴任のコストと準備リストを自動生成。8つの質問で年間追加コスト試算・準備チェックリスト・節約ポイントを提案する無料診断。">
+  <meta property="og:title" content="転勤・単身赴任 費用準備診断｜費用と準備リストを自動生成">
+  <meta property="og:description" content="8つの質問で転勤コストを試算。準備チェックリストと節約ポイントも提案。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://appadaycreator.github.io/transfer-cost-advisor/">
+  <link rel="canonical" href="https://appadaycreator.github.io/transfer-cost-advisor/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "転勤・単身赴任 費用準備診断",
+    "description": "転勤先・家族構成から単身赴任のコストと準備リストを自動生成",
+    "url": "https://appadaycreator.github.io/transfer-cost-advisor/",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "JPY"}
+  }
+  </script>
+  <!-- GTM Head -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TXQGZRF9');</script>
+  <!-- Clarity -->
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","s3t9vl8h3v");</script>
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8427583028015858" crossorigin="anonymous"></script>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Error Handler -->
+  <script>window.onerror=function(m,s,l,c,e){console.warn('Error:',m);return true;};window.addEventListener('unhandledrejection',function(e){console.warn('Rejection:',e.reason);});</script>
+</head>
+<body class="bg-blue-50 text-gray-800 min-h-screen">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <header class="bg-gradient-to-r from-blue-700 to-orange-600 text-white shadow-lg">
+    <div class="max-w-3xl mx-auto px-4 py-6">
+      <div class="flex items-center gap-3">
+        <span class="text-4xl">🚄</span>
+        <div>
+          <h1 class="text-2xl font-bold">転勤・単身赴任 費用準備診断</h1>
+          <p class="text-blue-100 text-sm mt-1">転勤先・家族構成から費用と準備リストを自動生成</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <div class="mb-6">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <div id="quiz-section">
+      <div class="bg-white rounded-2xl shadow-md p-6 mb-6">
+        <p class="text-blue-600 font-semibold text-sm mb-2">8つの質問で転勤コストと準備リストがわかる</p>
+        <h2 class="text-xl font-bold text-gray-800 mb-4">転勤・単身赴任の費用診断</h2>
+        <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+          <div id="progress-bar" class="bg-orange-500 h-2 rounded-full transition-all duration-500" style="width:0%"></div>
+        </div>
+        <p id="progress-text" class="text-xs text-gray-500 mb-6">質問 1 / 8</p>
+
+        <div id="q1" class="question-block">
+          <h3 class="text-lg font-semibold mb-4">転勤先は？</h3>
+          <div class="grid grid-cols-2 gap-3">
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="1" data-v="urban">国内・都市部（東京・大阪等）</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="1" data-v="rural">国内・地方（地方都市）</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="1" data-v="asia">海外（アジア圏）</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="1" data-v="west">海外（欧米・その他）</button>
+          </div>
+        </div>
+
+        <div id="q2" class="question-block hidden">
+          <h3 class="text-lg font-semibold mb-4">家族の対応は？</h3>
+          <div class="grid grid-cols-2 gap-3">
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="2" data-v="together">家族全員で帯同する</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="2" data-v="solo-family">単身赴任（家族は自宅に残る）</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="2" data-v="single">独身・単身（家族なし）</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="2" data-v="partial">一部の家族だけ帯同</button>
+          </div>
+        </div>
+
+        <div id="q3" class="question-block hidden">
+          <h3 class="text-lg font-semibold mb-4">転勤先の生活費水準は？</h3>
+          <div class="grid grid-cols-2 gap-3">
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="3" data-v="low">現在より安い</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="3" data-v="same">ほぼ同じ</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="3" data-v="high">現在より高い（都市部等）</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="3" data-v="much-high">大幅に高い（海外・東京等）</button>
+          </div>
+        </div>
+
+        <div id="q4" class="question-block hidden">
+          <h3 class="text-lg font-semibold mb-4">会社からの転勤補助は？</h3>
+          <div class="grid grid-cols-2 gap-3">
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="4" data-v="full">手厚い（引越し・住居全額負担）</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="4" data-v="partial">一部補助あり</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="4" data-v="minimal">最低限のみ</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="4" data-v="none">補助なし（自費）</button>
+          </div>
+        </div>
+
+        <div id="q5" class="question-block hidden">
+          <h3 class="text-lg font-semibold mb-4">転勤期間の見込みは？</h3>
+          <div class="grid grid-cols-2 gap-3">
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="5" data-v="short">1年以内</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="5" data-v="mid">1〜3年</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="5" data-v="long">3〜5年</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="5" data-v="unknown">不明（長期も可能性あり）</button>
+          </div>
+        </div>
+
+        <div id="q6" class="question-block hidden">
+          <h3 class="text-lg font-semibold mb-4">帰省の頻度は？</h3>
+          <div class="grid grid-cols-2 gap-3">
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="6" data-v="weekly">毎週（週末帰宅）</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="6" data-v="monthly">月1〜2回</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="6" data-v="few">年数回（長期休暇）</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="6" data-v="none">帰省なし（独身・全員帯同）</button>
+          </div>
+        </div>
+
+        <div id="q7" class="question-block hidden">
+          <h3 class="text-lg font-semibold mb-4">現在の家賃は？</h3>
+          <div class="grid grid-cols-2 gap-3">
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="7" data-v="6">〜6万円</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="7" data-v="10">6〜10万円</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="7" data-v="15">10〜15万円</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="7" data-v="over15">15万円以上（または持ち家）</button>
+          </div>
+        </div>
+
+        <div id="q8" class="question-block hidden">
+          <h3 class="text-lg font-semibold mb-4">引越し費用の会社負担割合は？</h3>
+          <div class="grid grid-cols-2 gap-3">
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="8" data-v="100">全額会社負担</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="8" data-v="50">半額程度負担</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="8" data-v="cap">上限あり（10〜30万円等）</button>
+            <button class="quiz-btn bg-blue-50 border-2 border-blue-200 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100 transition" data-q="8" data-v="0">全額自己負担</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="result-section" class="hidden">
+      <div class="bg-white rounded-2xl shadow-md p-6 mb-6">
+        <h2 class="text-2xl font-bold text-center mb-6 text-blue-800">転勤費用診断結果</h2>
+        <div id="result-content"></div>
+      </div>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-2xl p-6 mb-6">
+        <h3 class="text-lg font-bold mb-4 text-blue-800">📦 引越し・単身赴任グッズ</h3>
+        <div class="space-y-3">
+          <a href="https://www.amazon.co.jp/s?k=%E5%8D%98%E8%BA%AB%E8%B5%B4%E4%BB%BB+%E5%BC%95%E8%B6%8A%E3%81%97&tag=appadaycrea0f-22" target="_blank" rel="noopener" class="block bg-white border border-blue-300 rounded-xl p-4 hover:shadow-md transition">
+            <p class="font-semibold text-blue-700">Amazon｜単身赴任・引越しグッズを探す</p>
+            <p class="text-sm text-gray-600 mt-1">単身用家電・収納・生活用品など引越し準備に必要なものを一括購入</p>
+          </a>
+          <a href="https://px.a8.net/svt/ejp?a8mat=4AVCO8+3ORU2Y+5JTC+5YRHE" target="_blank" rel="noopener" class="block bg-white border border-blue-300 rounded-xl p-4 hover:shadow-md transition">
+            <p class="font-semibold text-blue-700">ヨンデミー｜転勤・単身生活を乗り切る本</p>
+            <p class="text-sm text-gray-600 mt-1">単身赴任の生活術・節約・マネー管理の本をAIが提案</p>
+          </a>
+          <img src="https://www11.a8.net/0.gif?a8mat=4AVCO8+3ORU2Y+5JTC+5YRHE" width="1" height="1" alt="">
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-md p-6 mb-6">
+        <h3 class="text-lg font-bold mb-4 text-gray-700">関連ツール</h3>
+        <div class="grid grid-cols-1 gap-3">
+          <a href="https://appadaycreator.github.io/moving-cost-simulator/" class="flex items-center gap-3 p-3 bg-blue-50 rounded-xl hover:bg-blue-100 transition">
+            <span class="text-2xl">🚛</span><div><p class="font-semibold">引越しコストシミュレーター</p><p class="text-sm text-gray-500">引越し業者の費用を試算</p></div>
+          </a>
+          <a href="https://appadaycreator.github.io/remote-work-advisor/" class="flex items-center gap-3 p-3 bg-blue-50 rounded-xl hover:bg-blue-100 transition">
+            <span class="text-2xl">💻</span><div><p class="font-semibold">リモートワークアドバイザー</p><p class="text-sm text-gray-500">テレワーク環境の最適化を提案</p></div>
+          </a>
+          <a href="https://appadaycreator.github.io/rental-vs-buy-advisor/" class="flex items-center gap-3 p-3 bg-blue-50 rounded-xl hover:bg-blue-100 transition">
+            <span class="text-2xl">🏠</span><div><p class="font-semibold">賃貸 vs 購入 比較</p><p class="text-sm text-gray-500">転勤が多い方の住宅選び</p></div>
+          </a>
+        </div>
+      </div>
+
+      <button onclick="location.reload()" class="w-full bg-blue-700 text-white font-bold py-3 rounded-xl hover:bg-blue-800 transition">もう一度診断する</button>
+    </div>
+  </main>
+
+  <footer class="bg-blue-900 text-blue-100 text-center py-4 mt-8">
+    <p class="text-sm">&copy; 2026 転勤・単身赴任 費用準備診断 | <a href="https://appadaycreator.github.io/" class="underline">AppaDayCreator</a></p>
+  </footer>
+
+  <script>
+    const answers = {};
+    const totalQ = 8;
+
+    document.querySelectorAll('.quiz-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const q = parseInt(this.dataset.q);
+        const v = this.dataset.v;
+        answers[q] = v;
+        document.querySelectorAll(`[data-q="${q}"]`).forEach(b => b.classList.remove('border-blue-500','bg-blue-100'));
+        this.classList.add('border-blue-500','bg-blue-100');
+        setTimeout(() => {
+          if (q < totalQ) {
+            document.getElementById(`q${q}`).classList.add('hidden');
+            document.getElementById(`q${q+1}`).classList.remove('hidden');
+            document.getElementById('progress-bar').style.width = (q/totalQ*100)+'%';
+            document.getElementById('progress-text').textContent = `質問 ${q+1} / ${totalQ}`;
+          } else { showResult(); }
+        }, 300);
+      });
+    });
+
+    function showResult() {
+      document.getElementById('quiz-section').classList.add('hidden');
+      document.getElementById('result-section').classList.remove('hidden');
+
+      const destination = answers[1];
+      const family = answers[2];
+      const costLevel = answers[3];
+      const companyHelp = answers[4];
+      const period = answers[5];
+      const homeTrip = answers[6];
+      const currentRent = parseInt(answers[7]) || 10;
+      const movingCover = answers[8];
+
+      // Base additional monthly cost
+      let monthlyAdd = 0;
+
+      // Housing additional cost
+      const destRent = { urban: 12, rural: 6, asia: 15, west: 25 };
+      const newRent = destRent[destination] || 10;
+      const soloRent = family === 'solo-family' ? newRent : 0; // single unit needed
+      const homeRent = family === 'solo-family' ? currentRent : 0; // keep home
+      monthlyAdd += soloRent;
+
+      // Living cost diff
+      const costAdd = { low: -2, same: 0, high: 3, 'much-high': 8 };
+      monthlyAdd += costAdd[costLevel] || 0;
+
+      // Home trip cost
+      const tripMap = { weekly: 3, monthly: 1.5, few: 0.3, none: 0 };
+      const tripMonthly = tripMap[homeTrip] || 0;
+      monthlyAdd += tripMonthly;
+
+      // One-time moving cost
+      const movingTotal = 30; // avg
+      const movingCoverMap = { '100': 0, '50': 15, 'cap': 15, '0': movingTotal };
+      const movingSelfPay = movingCoverMap[movingCover] || 15;
+
+      // Monthly total
+      const annualAdd = Math.round(monthlyAdd * 12 + movingSelfPay);
+
+      // Period total
+      const periodYears = { short: 1, mid: 2, long: 4, unknown: 3 };
+      const years = periodYears[period] || 2;
+      const totalAdd = annualAdd * years;
+
+      // Checklist
+      const checklist = [
+        '✅ 転勤辞令・内示を書面で確認',
+        '✅ 会社の転勤規定・補助内容を人事に確認',
+        '✅ 引越し業者の見積もり（複数社比較）',
+        '✅ 転居先の物件探し・内見',
+        '✅ 住民票・免許証の住所変更手続き',
+        '✅ 郵便の転送設定（1年間）',
+        '✅ 公共料金（電気・ガス・水道）の引越し手続き',
+        '✅ 国民健康保険・年金の住所変更（必要な場合）',
+      ];
+
+      if (family === 'solo-family') {
+        checklist.push('✅ 家族の緊急連絡先・近隣サポート体制の確認');
+        checklist.push('✅ 子どもの転校手続き（帯同の場合）');
+        checklist.push('✅ 単身赴任手当・家族手当の継続確認');
+      }
+
+      if (destination === 'asia' || destination === 'west') {
+        checklist.push('✅ パスポート・VISA手続き');
+        checklist.push('✅ 海外赴任手当・海外保険の確認');
+        checklist.push('✅ 現地の銀行口座開設準備');
+        checklist.push('✅ 子どもの現地校・インターナショナルスクール確認');
+      }
+
+      // Saving tips
+      const tips = [
+        '📦 家具は転居先でリサイクルショップ・フリマ活用（運搬コスト削減）',
+        '🚊 帰省は新幹線より高速バス・LCCを活用',
+        '🍱 外食を減らし自炊習慣をつける（月2〜3万円節約）',
+        '📱 格安SIMに切り替える（月5,000円〜節約）',
+        '💡 単身向けのコンパクト家電・家具で光熱費削減',
+      ];
+
+      if (homeTrip === 'weekly') {
+        tips.push('🏠 週末帰宅は通勤定期の代わりに月額帰省手当を会社に確認');
+      }
+
+      let html = `
+        <div class="bg-orange-50 border-2 border-orange-400 rounded-xl p-4 mb-4 text-center">
+          <p class="text-sm text-gray-500 mb-1">年間追加コスト試算</p>
+          <p class="text-4xl font-bold text-orange-600">${annualAdd}万円</p>
+          <p class="text-sm text-gray-500 mt-1">（初年度・引越し費用含む）</p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <div class="bg-gray-50 rounded-xl p-3">
+            <p class="text-xs text-gray-500">月次追加コスト</p>
+            <p class="text-xl font-bold text-gray-800">${monthlyAdd.toFixed(1)}万円/月</p>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-3">
+            <p class="text-xs text-gray-500">${years}年間累計追加コスト</p>
+            <p class="text-xl font-bold text-gray-800">${totalAdd}万円</p>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-3">
+            <p class="text-xs text-gray-500">帰省交通費（月額試算）</p>
+            <p class="text-xl font-bold text-gray-800">${tripMonthly.toFixed(1)}万円</p>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-3">
+            <p class="text-xs text-gray-500">引越し自己負担（初回）</p>
+            <p class="text-xl font-bold text-gray-800">${movingSelfPay}万円</p>
+          </div>
+        </div>
+
+        <div class="bg-blue-50 rounded-xl p-4 mb-4">
+          <p class="font-bold text-blue-800 mb-2">📋 準備チェックリスト（${checklist.length}項目）</p>
+          <ul class="text-sm text-gray-700 space-y-1">
+            ${checklist.map(c => `<li>${c}</li>`).join('')}
+          </ul>
+        </div>
+
+        <div class="bg-green-50 border border-green-300 rounded-xl p-4">
+          <p class="font-bold text-green-800 mb-2">💡 節約ポイント</p>
+          <ul class="text-sm text-gray-700 space-y-1">
+            ${tips.map(t => `<li>${t}</li>`).join('')}
+          </ul>
+        </div>
+
+        <div class="mt-4 bg-yellow-50 border border-yellow-300 rounded-xl p-4">
+          <p class="text-xs text-yellow-700">※ 試算は概算値です。実際のコストは転居先・家族構成・会社規定により異なります。</p>
+        </div>`;
+
+      document.getElementById('result-content').innerHTML = html;
+    }
+  </script>
+</body>
+</html>
