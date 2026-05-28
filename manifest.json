@@ -4,7 +4,7 @@
   "description": "転勤先・家族構成から単身赴任のコストと準備リストを自動生成。8つの質問で年間追加コスト試算・準備チェックリスト・節約ポイントを提案する無料診断。",
   "start_url": "/transfer-cost-advisor/",
   "display": "standalone",
-  "background_color": "#f8faf9",
+  "background_color": "#ffffff",
   "theme_color": "#7c3aed",
   "lang": "ja",
   "icons": [
